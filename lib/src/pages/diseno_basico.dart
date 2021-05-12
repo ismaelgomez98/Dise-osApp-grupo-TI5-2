@@ -83,7 +83,7 @@ class DisenoBasico extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
       child: Text(
           'A veces, partes de un Estado con una historia o cultura características son llamados países, especialmente por los oriundos del lugar, como por ejemplo Escocia, Gales, Inglaterra o Irlanda del Norte, países que conforman el Reino Unido. Puede referirse también a regiones o incluso comarcas sin grandes diferencias culturales con las de los alrededores.',
-          
+          style: TextStyle(color:Colors.white),
           ),
     );
   }
