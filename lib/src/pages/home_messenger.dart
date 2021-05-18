@@ -1,4 +1,5 @@
 import 'package:disenos2/src/widgets/avatar_active.dart';
+import 'package:disenos2/src/widgets/campo_texto.dart';
 import 'package:flutter/material.dart';
 
 class HomeMessenger extends StatelessWidget {
@@ -9,7 +10,7 @@ class HomeMessenger extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0.0,
         actions: [
-          _rowInfo(),
+          _RowInfo(),
           Expanded(child: Container()),
           _iconBtnCamara(),
           _iconBtnEdit(),
@@ -36,7 +37,7 @@ class HomeMessenger extends StatelessWidget {
     return Container(
       height: 100.0,
       child: PageView(
-        controller: PageController(initialPage: 1, viewportFraction: 0.3),
+        controller: PageController(initialPage: 1, viewportFraction: 0.2),
         children: [
           _user(),
           _user(),
@@ -71,17 +72,15 @@ class HomeMessenger extends StatelessWidget {
   }
 
   Widget _textBuscar() {
-    return Container(
-      height: 50.0,
-      margin: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
-      child: TextField(
-        textAlignVertical: TextAlignVertical.bottom,
-        decoration: InputDecoration(
-            border:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
-            prefixIcon: Icon(Icons.search),
-            hintText: 'Buscar'),
-      ),
+    return Column(
+      children: [
+        CampoTexto(
+          hintText: 'Buscar',
+          prefixIcon: Icon(Icons.search),
+          radius: 30.0,
+          height: 45.0,
+        ),
+      ],
     );
   }
 
@@ -104,28 +103,6 @@ class HomeMessenger extends StatelessWidget {
             color: Colors.black,
           ),
           onPressed: () {}),
-    );
-  }
-
-  Widget _rowInfo() {
-    return Container(
-      margin: EdgeInsets.only(top:5.0),
-      child: Row(
-        children: [
-          CircleAvatar(
-            radius: 33.0,
-            backgroundImage: NetworkImage(
-                'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlcnNvbmFzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'),
-          ),
-          Text(
-            'Chats',
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold),
-          )
-        ],
-      ),
     );
   }
 
@@ -157,6 +134,31 @@ class HomeMessenger extends StatelessWidget {
       subtitle: Text('tu: Hola como estas'),
       leading: AvatarActive(),
       trailing: Icon(Icons.check_circle),
+    );
+  }
+}
+
+class _RowInfo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 5.0),
+      child: Row(
+        children: [
+          CircleAvatar(
+            radius: 33.0,
+            backgroundImage: NetworkImage(
+                'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlcnNvbmFzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80'),
+          ),
+          Text(
+            'Chats',
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
     );
   }
 }

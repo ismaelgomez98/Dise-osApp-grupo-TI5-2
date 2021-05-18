@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/disenoBasico': (_) => DisenoBasico(),
         '/scrollBasico':(_)=>ScrollBasico(),
-        '/homeMessenger':(_)=>HomeMessenger()
+        '/homeMessenger':(_)=>HomeMessenger(),
       },
     );
   }
