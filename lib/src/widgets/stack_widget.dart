@@ -15,7 +15,7 @@ class StackWidget extends StatelessWidget {
         children: [
           widget1,
           Positioned(
-            left: 30.0,
+            left: 20.0,
             top: 10.0,
             child: widget2,
           )
