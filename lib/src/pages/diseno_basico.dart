@@ -61,7 +61,7 @@ class DisenoBasico extends StatelessWidget {
     );
   }
 
-  Widget _columContactos({String titulo, IconData icono}) {
+  Widget _columContactos({required String titulo, required IconData icono}) {
     return Column(
       children: [
         Icon(

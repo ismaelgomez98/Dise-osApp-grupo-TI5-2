@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class IconButtonWidget extends StatelessWidget {
   final IconData icono;
-  final Color color;
+  final Color ?color;
 
   IconButtonWidget({
     this.color = Colors.black,
-    this.icono,
+   required this.icono,
   });
   @override
   Widget build(BuildContext context) {

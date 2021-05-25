@@ -5,8 +5,8 @@ class StackWidget extends StatelessWidget {
   final Widget widget2;
 
   StackWidget({
-    this.widget1,
-    this.widget2,
+    required this.widget1,
+    required this.widget2,
   });
   @override
   Widget build(BuildContext context) {
