@@ -7,7 +7,12 @@ class DisenoBasico extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(
-        children: [_imgbg(), _calificacionPaisaje(), _contactos(), _textDesc()],
+        children: [
+          _imgbg(),
+          _calificacionPaisaje(),
+          _contactos(),
+          _textDesc(),
+        ],
       ),
     );
   }
@@ -31,7 +36,7 @@ class DisenoBasico extends StatelessWidget {
         children: [
           Text(
             'Alaska estados unidos',
-            style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
           ),
           Row(
             children: [
@@ -61,7 +66,7 @@ class DisenoBasico extends StatelessWidget {
     );
   }
 
-  Widget _columContactos({String titulo, IconData icono}) {
+  Widget _columContactos({required String titulo, required IconData icono}) {
     return Column(
       children: [
         Icon(
@@ -82,9 +87,9 @@ class DisenoBasico extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
       child: Text(
-          'A veces, partes de un Estado con una historia o cultura características son llamados países, especialmente por los oriundos del lugar, como por ejemplo Escocia, Gales, Inglaterra o Irlanda del Norte, países que conforman el Reino Unido. Puede referirse también a regiones o incluso comarcas sin grandes diferencias culturales con las de los alrededores.',
-          style: TextStyle(color:Colors.white),
-          ),
+        'A veces, partes de un Estado con una historia o cultura características son llamados países, especialmente por los oriundos del lugar, como por ejemplo Escocia, Gales, Inglaterra o Irlanda del Norte, países que conforman el Reino Unido. Puede referirse también a regiones o incluso comarcas sin grandes diferencias culturales con las de los alrededores.',
+        style: TextStyle(color: Colors.white),
+      ),
     );
   }
 }

@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Disenos grupo TI5-2',
-      initialRoute: '/prueba_ui',
+      initialRoute: '/homeMessenger',
       routes: {
         '/prueba_ui':(_)=>PruebaUi(),
         '/disenoBasico': (_) => DisenoBasico(),
