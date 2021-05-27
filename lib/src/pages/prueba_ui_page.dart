@@ -1,4 +1,5 @@
 import 'package:disenos2/src/widgets/circle_avatar_widget.dart';
+import 'package:disenos2/src/widgets/float_buttom_back.dart';
 import 'package:disenos2/src/widgets/icon_button_widget.dart';
 import 'package:disenos2/src/widgets/menu_abajo_widget.dart';
 import 'package:disenos2/src/widgets/stack_widget.dart';
@@ -21,7 +22,7 @@ class PruebaUi extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          margin: EdgeInsets.only(top:20.0),
+          margin: EdgeInsets.only(top: 20.0),
           child: Column(
             children: [
               Container(
@@ -74,7 +75,9 @@ class PruebaUi extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: FloatButtomBack(),
       bottomNavigationBar: MenuAbajo(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

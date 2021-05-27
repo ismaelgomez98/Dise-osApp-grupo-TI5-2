@@ -1,5 +1,6 @@
 import 'package:disenos2/src/widgets/avatar_active.dart';
 import 'package:disenos2/src/widgets/campo_texto.dart';
+import 'package:disenos2/src/widgets/float_buttom_back.dart';
 import 'package:flutter/material.dart';
 
 class HomeMessenger extends StatelessWidget {
@@ -19,6 +20,8 @@ class HomeMessenger extends StatelessWidget {
       body: ListView(
         children: [_textBuscar(), _pageViewUser(), _columnUser()],
       ),
+      floatingActionButton: FloatButtomBack(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(items: [
         BottomNavigationBarItem(
             icon: Icon(Icons.chat_bubble, size: 30.0), label: 'Chats'),

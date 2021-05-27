@@ -1,3 +1,4 @@
+import 'package:disenos2/src/widgets/float_buttom_back.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class DisenoBasico extends StatelessWidget {
           _textDesc(),
         ],
       ),
+      floatingActionButton: FloatButtomBack(),
     );
   }
 

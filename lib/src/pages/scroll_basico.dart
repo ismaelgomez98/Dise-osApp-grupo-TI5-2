@@ -1,3 +1,4 @@
+import 'package:disenos2/src/widgets/float_buttom_back.dart';
 import 'package:flutter/material.dart';
 
 class ScrollBasico extends StatelessWidget {
@@ -12,6 +13,7 @@ class ScrollBasico extends StatelessWidget {
           _pagina2(),
         ],
       ),
+      floatingActionButton: FloatButtomBack(),
     );
   }
 
